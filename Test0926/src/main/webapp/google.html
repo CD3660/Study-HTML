@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인-Google 계정</title>
+<style>
+#total {
+	margin:auto;
+	margin-bottom:50px;
+	border: 1px solid;
+	border-color: lightgray;
+	border-radius: 10px;
+	text-align: center;
+	align-content: center;
+	width: 500px;
+	height: 500px;
+}
+
+input {
+	border: 0px
+}
+
+input:focus {
+	outline: none;
+}
+
+#inputname {
+	border: 1px solid;
+	box-sizing:border-box;
+	border-color: lightgray;
+	border-radius: 10px;
+	text-align: left;
+	align-content: center;
+	width: 80%;
+	height: 50px;
+	padding-top: auto;
+	padding-bottom: auto;
+	font-size: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+#inputname2
+{
+	border: 1px solid;
+	box-sizing:border-box;
+	border-color: lightgray;
+	border-radius: 10px;
+	text-align: left;
+	align-content: center;
+	width: 80%;
+	height: 50px;
+	padding-top: auto;
+	padding-bottom: auto;
+	font-size: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+#submit {
+	background: #1A73E8;
+	color: white;
+	width : 80px;
+	height: 30px;
+	font-size: 1.2em;
+	border-radius: 7px;
+}
+#submit:hover {
+	cursor: pointer;
+	background: #1B66C9;
+}
+#inputname:focus-within {
+	background: white;
+	border :2px solid;
+	border-color: blue;
+}
+#inputname2:focus-within {
+	border :2px solid;
+	border-color: blue;
+}
+input::placeholder {
+  color: lightgray;
+}
+</style>
+</head>
+<body>
+	<div id="total">
+		<br>
+		<br>
+		<img alt="구글 로고" src="media/google-2015.svg" style="width:50px; height:30px">
+		<h2>Google 계정 만들기</h2>
+		<p>이름을 입력하세요</p>
+		<br>
+		<form>
+			<label for="familyname">
+				<div id="inputname">
+					<input type="text" id="familyname" placeholder="성(선택사항)">
+				</div>
+			</label> <br>
+		</form>
+		<form>
+			<label for="lastname">
+				<div id="inputname2">
+					<input type="text" id="lastname" placeholder="이름">
+				</div>
+			</label>
+			<p style="text-align: right; margin-right: 50px"><input type="submit" value="다음" id="submit"></p>
+
+	</div>
+</body>
+</html>
