@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 폼</title>
+</head>
+<body>
+	<script>
+	function f() {
+		if (document.submit.id.value=="") {
+		alert('id를 입력하세요');
+	}	else if (document.submit.pw.value=="") {
+		alert('pw를 입력하세요');
+	}	else {
+		alert('회원가입 완료');
+	}
+	}
+		
+	</script>
+	<form name="submit" onSubmit="f()">
+		id : <input type="text" id="id"> 
+		pw : <input type="password"	id="pw"> 
+			<input type="submit" value="submit">
+	</form>
+</body>
+</html>
