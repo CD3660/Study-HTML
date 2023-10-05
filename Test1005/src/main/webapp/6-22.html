@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수</title>
+<script>
+function adder(){
+	let sum;
+	sum = 3+2;
+	document.getElementById("print").innerHTML="3+2="+sum;
+	return;
+}
+function minus(){
+	let sum;
+	sum = 3-2;
+	document.getElementById("print").innerHTML="3-2="+sum;
+	return;
+}
+function multi(){
+	let sum;
+	sum = 3*2;
+	document.getElementById("print").innerHTML="3*2="+sum;
+	return;
+}
+function divide(){
+	let sum;
+	sum = 3/2;
+	document.getElementById("print").innerHTML="3/2="+sum;
+	return;
+}
+</script>
+</head>
+<body>
+	<h3>함수 adder()</h3>
+	<hr>
+	<form name="f">
+	<input type="button" value="add" onclick="adder()">
+	<input type="button" value="minus" onclick="minus()">
+	<input type="button" value="multi" onclick="multi()">
+	<input type="button" value="div" onclick="divide()">
+	</form>
+	<div id="print" style=" color: blue">결과 출력</div>
+</body>
+</html>
+
