@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new Object()로 사용자 객체 만들기</title>
+<script>
+	function inquiry() { return this.balance; }
+	function deposit(money) { return this.balance+=money; }
+	function withdraw(money) { return this.balance-=money; }
+	
+	//사용자 객체 만들기
+	let account = new Object();
+	//필드멤버 3개 선언
+	account.owner = "황기태";
+	account.code = "111";
+	account.balance = 35000;
+	
+	//생성된 객체와 함수 3개의 연결
+	account.inquiry = inquiry;//메소드 대입. 함수형 변수. 변태다.
+	account.deposit = deposit;
+	account.withdraw = withdraw;
+</script>
+</head>
+<body>
+	<h3>new Object()로 사용자 객체 만들기</h3>
+	<hr>
+	<script>
+		document.write("account : ");
+		document.write(account.owner + ", ");
+		document.write(account.code + ", ");
+		document.write(account.balance + "<br>");
+		
+		account.deposit(10000);
+		document.write("10000원 저금 후 잔액은 "+account.inquiry()+"<br>");
+		account.withdraw(5000);
+		document.write("5000원 인출 후 잔액은 "+account.inquiry()+"<br>");
+	</script>
+</body>
+</html>
