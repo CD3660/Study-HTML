@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onfocus와 onblur</title>
+<script>
+function checkFilled(obj) {
+	let nameCheck = document.getElementById("nameCheck");
+	if(obj.value == "") {
+		nameCheck.innerHTML= "이름은 필수 입력입니다." ;
+	} else {
+		nameCheck.innerHTML= "";
+	}
+}
+function infoSubmit() {
+	let name = document.getElementById("name")
+	if(name.value==""){
+		alert("이름은 필수 입력입니다.");
+		document.getElementById('name').focus();
+		return false;
+	}
+}
+</script>
+</head>
+<body onload="document.getElementById('name').focus()">
+	<h3>onfocus와 onblur</h3>
+	<hr>
+	<p> 이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.</p>
+	<form>
+	이름 <input type="text" id="name" onblur="checkFilled(this)">
+		<span id="nameCheck" style="color: red; font-weight: bold;"></span>
+	<p>
+	학번 <input type="text"><p>
+	<input type="submit" value="등록" onclick="return infoSubmit()">
+	</form>
+</body>
+</html>
