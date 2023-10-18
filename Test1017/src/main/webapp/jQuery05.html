@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+		#ex1 {
+			width: 300px;
+			height: 200px;
+			background-color: #59b1f6;
+		}
+
+		#ex2 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="ex1">
+		아이디: <input type="text" name="userid">
+		<br>
+		비밀번호: <input type="password" name="userpass">
+		<button>로그인</button>
+		<div id="ex2">
+			<p></p>
+		</div>
+	</div>
+</body>
+<script>
+	$("div").hover(function () {
+		$("p").text("로그인 해 주세요");
+	}, function () {
+		$("p").text("");
+	});
+	
+	$("input").focus(function () {
+		$(this).css("background-color", "#cccccc");
+	});
+	$("input").blur(function () {
+		$(this).css("background-color", "#ffffff");
+	});
+</script>
+
+</html>

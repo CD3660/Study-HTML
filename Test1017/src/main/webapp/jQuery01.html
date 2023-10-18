@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>윈도우 닫기</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.slim.js">
+	</script>
+</head>
+<body>
+	<h1>클래스가 없다.</h1><h1 class="cls">클래스가 있다.</h1>
+	<h2>클래스가 없다.</h2><h2 class="cls">클래스가 있다.</h2>
+	<p id="one"></p>	<p>태그만 있는 녀석</p><p>태그만 있는 녀석</p>
+	<button id="idSel">아이디</button>
+	<button id="classSell">클래스</button>
+	<button id="tagSell">태그</button>
+</body>
+<script>
+	$("#idSel").click(function(){
+		$("#one").html("안녕 새로운 문자가 생겼어.");
+	});
+	$("#classSell").click(function(){
+		$(".cls").css("background","red");
+	});
+	$("#tagSell").click(function(){
+		$("p").css("color","blue");
+	});
+</script>
+</html>

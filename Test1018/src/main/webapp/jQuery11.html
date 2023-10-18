@@ -1,0 +1,30 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>J-Query</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+	</style>
+</head>
+
+<body>
+
+	<p id="test1">문자열 1</p>
+	<p id="test2">문자열 1</p>
+	<input id="test3" type="text" value="홍길동" />
+	<input id="test4" type="text" value="비밀번호" />
+	<br />
+	<button>속성 변경</button>
+</body>
+<script>
+	$("#test1").text("변경된 문자열");
+	$("#test2").html("<b>변경된 문자열</b>");
+	$("button").click(function () {
+		$("#test3").attr("type","button");
+		$("#test3").attr("onclick","alert('ok')");
+		$("#test4").attr("type","password");
+	});
+</script>
+
+</html>

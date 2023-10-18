@@ -1,0 +1,71 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+		div {
+			width: 100px;
+			background-color: green;
+			text-align: center;
+			padding: 10px 0 10px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div>메뉴1</div>
+	<ul>
+		<li>LIST 01</li>
+		<li>LIST 02</li>
+		<li>LIST 03</li>
+		<li>LIST 04</li>
+		<li>LIST 05</li>
+	</ul>
+	<button id="toggle">토글버튼</button>
+	<button id="onOff">OFF</button>
+	<p>LIST 01</p>
+	<p>LIST 02</p>
+	<p>LIST 03</p>
+	<p>LIST 04</p>
+	<p>LIST 05</p>
+
+	<!--<input id="onf" type="button" value="OFF"/>-->
+
+</body>
+<script>
+	$(document).ready(function () {
+		$("#onf").click(function () {
+			var value = $(this).attr("value");
+			console.log(value);
+			$(this).attr("value", "ON")
+		});
+
+		$("ul").hide();
+
+		$("div").hover(function () {
+			$("ul").show(1000);
+		}, function () {
+			$("ul").hide(1000);
+		});
+		
+		$("#onOff").click(function(){
+			view=$("p").css("display");
+			console.log(view);
+			if(view=="none"){
+				$("#onOff").text("OFF");
+				$("p").css("display","block");
+			} else {
+				$("#onOff").text("ON");
+				$("p").css("display","none");
+			}
+		});
+
+		$("#toggle").click(function(){
+			$("p").toggle();
+		});
+
+	});
+</script>
+
+</html>

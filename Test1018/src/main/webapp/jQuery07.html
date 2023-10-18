@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+		div {
+			width: 80px;
+			height: 80px;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<button id="visible">Fade In</button>
+	<button id="invisible">Fade Out</button>
+	<button id="onOff">Fade Toggle</button>
+	<img src="media/btn.png" width="50px" height="50px"></img>
+	<div style="background-color: red;"></div>
+	<div style="background-color: green;"></div>
+	<div style="background-color: blue;"></div>
+</body>
+<script>
+	$("button").click(function () {
+		var txt = $(this).text();
+		console.log(txt);
+	});
+
+	$("#visible").click(function () {
+		$("div").first().fadeIn("fast", function () {
+			$(this).next("div").fadeIn("fast", function () {
+				$(this).next("div").fadeIn("fast");
+			});
+		});
+	});
+
+	$("#invisible").click(function () {
+		$("div").first().fadeOut("slow", function showNext() {
+			$(this).next("div").fadeOut("slow", showNext);
+		});
+	});
+
+	$("#onOff").click(function () {
+		$("div").first().fadeToggle("slow", function showNext() {
+			$(this).next("div").fadeToggle("slow", showNext);
+		});
+	});
+
+	$("img").hover(function () {
+		$("img").fadeTo("slow", 0.15, function(){
+			$("img").attr("src","media/btn2.png");
+		});
+	},function(){
+		$("img").fadeTo("slow", 1, function(){
+			$("img").attr("src","media/btn.png");
+		});
+	});
+</script>
+
+</html>

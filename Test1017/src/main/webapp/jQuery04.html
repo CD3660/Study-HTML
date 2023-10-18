@@ -1,0 +1,75 @@
+<html>
+   <head>
+<meta charset="UTF-8">
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <style>
+         div{
+            width:200px;
+            height:200px;
+            margin-right: 7px;   
+            text-align: center;            
+         }
+         #mousezone{
+            background-color: #59b1f6;
+            float: left;
+         }   
+
+         #overzone{
+            background-color: #ffb5b4;
+            float: left;
+         }      
+      </style>
+   </head>
+   <body>
+      <p>클릭 하면 글자 색생이 바뀌어요~!</p>
+      <p>클릭 하면 글자 색생이 바뀌어요~!</p>
+      <p>클릭 하면 글자 색생이 바뀌어요~!</p>
+      <p>클릭 하면 글자 색생이 바뀌어요~!</p>
+      <div id="mousezone">마우스 존</div>
+      <div id="overzone">H 오버 존</div>
+      아이디: <input type="text" name="userid">
+      <br>
+      비밀번호: <input type="password" name="userpass">
+   </body>
+   <script>
+      $("p").click(function(){
+         $(this).css("color","red");
+      });
+      $("p").dblclick(function(){
+         $(this).css("color","blue");
+      });
+      $("#mousezone").mouseenter(function(){
+         $(this).text("마우스가 들어 왔구나!!");
+         $(this).css("background-color","red");
+      });
+      $("#mousezone").mouseleave(function(){
+         $(this).text("마우스가 나갔구나!!");
+         $(this).css("background-color","yellow");
+      });
+      $("#mousezone").mousedown(function(){
+         $(this).text("마우스 가 눌린 상태!!");
+         $(this).css("background-color","black");
+         $(this).css("color","white");
+      });
+      
+      $("#mousezone").mouseup(function(){
+         $(this).text("마우스 뗀 상태!!");
+         $(this).css("background-color","yellow");
+         $(this).css("color","black");
+      });  
+      $("#overzone").hover(function(){
+         $(this).text("마우스가 들어 왔구나!!");
+         $(this).css("background-color","red");
+      },function(){
+         $(this).text("마우스가 나갔구나!!");
+         $(this).css("background-color","yellow");      
+      });
+      
+      $("input").focus(function(){
+         $(this).css("background-color", "#cccccc");
+      });
+      $("input").blur(function(){
+         $(this).css("background-color", "#ffffff");
+      });
+   </script>
+</html>

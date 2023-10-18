@@ -1,0 +1,27 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+	</style>
+</head>
+
+<body>
+	<p>ID: <input type="text" id="test" value=""/><button id="goLink">확인</button></p>
+	<a href="#">링크 이동</a>
+</body>
+<script>
+	$(document).ready(function () {
+		$("#goLink").click(function () {
+			var userId = $("#test").val();
+			if (userId == "admin") {
+				$("a").attr("href", "http://www.icia.or.kr");
+			} else {
+				$("a").attr("href", "http://www.google.co.kr");
+			}
+		});
+	});
+</script>
+
+</html>
