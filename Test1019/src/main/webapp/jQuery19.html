@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+	</style>
+</head>
+
+<body>
+
+	<div style="border: 1px solid black;">
+		<p>첫번째 div 엘리먼트</p>
+		<p class="sel">두번째 div 엘리먼트</p>
+		<p>세번째 div 엘리먼트</p>
+		<p class="sel">네번째 div 엘리먼트</p>
+	</div>
+	<br>
+	<div style="border: 1px solid black;">
+		<p>다섯번째 div 엘리먼트</p>
+		<p class="sel">여섯번째 div 엘리먼트</p>
+		<p>일곱번째 div 엘리먼트</p>
+		<p class="sel">여덟번째 div 엘리먼트</p>
+	</div>
+	<button id="first">first</button>
+	<button id="last">last</button>
+	<button id="eq">eq(2)</button>
+	<button id="filter">filter</button>
+	<button id="not">not</button>
+</body>
+<script>
+	$("#first").click(function () {
+		$("div p").first().css("background-color", "yellow");
+	});
+	$("#last").click(function () {
+		$("div p").last().css("background-color", "yellow");
+	});
+	$("#eq").click(function () {
+		$("div p").eq(2).css("background-color", "yellow");
+	});
+	$("#filter").click(function () {
+		$("div p").filter(".sel").css("background-color", "orange");
+	});
+	$("#not").click(function () {
+		$("div p").not(".sel").css("background-color", "green");
+	});
+</script>
+
+</html>

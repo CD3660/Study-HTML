@@ -1,0 +1,138 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+		header {
+			text-align: center;
+			background-color: darkblue;
+			color: white;
+			height: 80px;
+			padding-top: 40px;
+			padding-bottom: 0px;
+			font-size: 25px;
+			margin-bottom: 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+
+		footer {
+			position: absolute;
+			bottom: 0;
+			text-align: center;
+			background-color: dodgerblue;
+			width: 100%;
+			color: white;
+			font-size: 1.2em;
+			height: 80px;
+			padding-top: 50px;
+			display: block;
+		}
+
+		nav {
+			background-color: cornflowerblue;
+			color: white;
+			font-weight: bold;
+			font-size: 12px;
+			text-align: left;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			padding-top: 1px;
+			padding-bottom: 1px;
+		}
+
+		nav li {
+			list-style: none;
+			display: inline-block;
+			margin-right: 20px;
+		}
+
+		body {
+			background-color: lightgrey;
+			margin: 0;
+			font-family: "굴림", Gulim;
+		}
+		body>div {
+			margin: 20px;
+		}
+		span {
+			font-family: Georgia, 'Times New Roman', Times, serif;
+		}
+		table {
+			border: 1px solid;
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		td, th{
+			border: 1px solid;
+		}
+		th{
+			width: 40%;
+		}
+		input.de {
+			width: 130px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		쇼핑몰 회원 관리 <span>ver1.0</span>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="jQuery14.html">회원등록</a></li>
+			<li><a href="jQuery15.html">회원목록조회/수정</a></li>
+			<li><a href="jQuery16.html">회원매출조회</a></li>
+			<li><a href="jQuery17.html">홈으로.</a></li>
+		</ul>
+	</nav>
+	<h3 style="text-align: center;">홈쇼핑 회원 등록</h3>
+	<form>
+		<table>
+			<tr>
+				<th>회원번호(자동발생)</th>
+				<td><input type="text" value="100006" class="de"></td>
+			</tr>
+			<tr>
+				<th>회원성명</th>
+				<td><input type="text" class="de"></td>
+			</tr>
+			<tr>
+				<th >회원전화</th>
+				<td><input type="text" style="width: 220px"></td>
+			</tr>
+			<tr>
+				<th >회원주소</th>
+				<td><input type="text" style="width: 300px"></td>
+			</tr>
+			<tr>
+				<th>가입일자</th>
+				<td><input type="text" value="20160907" class="de"></td>
+			</tr>
+			<tr>
+				<th>고객등급[A:VIP,B:일반,C:직원]</th>
+				<td><input type="text" class="de"></td>
+			</tr>
+			<tr>
+				<th>도시코드</th>
+				<td><input type="text" class="de"></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center;"><input type="submit" value="등록"> <input type="submit" value="조회"></td>
+			</tr>
+		</table>
+	</form>
+	<footer>
+		<span>HRDKOREA copyright&copy;2016 All rights reserved. Human Resource Development Service of Korea.</span>
+	</footer>
+</body>
+<script>
+</script>
+
+</html>

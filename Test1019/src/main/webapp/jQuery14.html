@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+		table,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		td {
+			padding: 10px 20px 10px 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<table width="100%">
+		<tr>
+			<td>학번</td>
+			<td>이름</td>
+			<td>과목</td>
+			<td>학점</td>
+			<td>설명</td>
+		</tr>
+	</table>
+	학번: <input id="01" type="text" /><br />
+	이름: <input id="02" type="text" /><br />
+	과목: <input id="03" type="text" /><br />
+	학점: <input id="04" type="text" /><br />
+	설명: <input id="05" type="text" /><br />
+	<button>입력</button>
+</body>
+<script>
+	$("button").click(function () {
+		var elem = $("input");
+		console.log(elem.length);
+		var txt = "";
+		txt += "<tr>";
+		for (var i; i < elem.length; i++) {
+			txt += "<td>" + $(elem[i]).val() + "</td>";
+		}
+		txt += "</tr>";
+		console.log(txt);
+		$("table").append(txt);
+		/*
+		var num = $("#01").val();
+		var name = $("#02").val();
+		var clas = $("#03").val();
+		var score = $("#04").val();
+		var desc = $("#05").val();
+		
+		var txt = "<tr><td>"+num+"</td><td>"+name+"</td><td>"+clas+"</td><td>"+score+"</td><td>"+desc+"</td></tr>";
+		
+		$("table").append(txt);
+		*/
+	});
+</script>
+
+</html>

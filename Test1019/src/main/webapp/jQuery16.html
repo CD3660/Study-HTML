@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+		.ex {
+			background-color: cadetblue;
+			text-align: center;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<button id="add">클래스 추가</button>
+	<button id="remove">클래스 삭제</button>
+	<button id="toggle">TOGGLE</button>
+	<div>DIV</div>
+</body>
+<script>
+	$("#add").click(function () {
+		$("div").addClass("ex");
+	});
+	$("#remove").click(function () {
+		$("div").removeClass("ex");
+	});
+	$("#toggle").click(function () {
+		$("div").toggleClass("ex");
+		
+		var sw = $("div").hasClass("ex");
+		console.log(sw);
+		
+		if(sw == true){
+			$(this).text("OFF");
+		} else {
+			$(this).text("ON");
+		}
+	});
+</script>
+
+</html>

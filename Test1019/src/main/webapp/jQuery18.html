@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<style>
+		.ancestors * {
+			display: block;
+			border: 2px solid gray;
+			color: black;
+			padding: 5px;
+			margin: 15px;
+		}
+
+		.selector {
+			color: red;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="ancestors">
+		<div class="parents" style="width: 500px;">
+			div(.parents)
+			<ul>ul
+				<li>li
+					<span class="first">span</span>
+				</li>
+			</ul>
+		</div>
+		<div class="parents" style="width: 500px;">
+			div(.parents)
+			<p>p
+				<span class="second">span</span>
+			</p>
+		</div>
+	</div>
+	<button id="child">자식 찾기</button>
+	<button id="find">span 찾기</button>
+	<button id="find2">자식 전체 찾기</button>
+</body>
+<script>
+	$("#child").click(function () {
+		$(".parents").children().addClass("selector");
+	});
+	$("#find").click(function () {
+		/*
+		var $elem = $('span');//jQuery 객체
+		$(".parents").find($elem).addClass("selector");
+		*/
+		$(".parents").find("span").addClass("selector");
+	});
+	$("#find2").click(function () {
+		$(".parents").find("*").addClass("selector");
+	});
+</script>
+
+</html>
